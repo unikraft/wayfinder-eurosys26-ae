@@ -43,4 +43,6 @@ Populating `results.csv` also takes a few minutes, you can monitor the progress 
 The script will work its way back in time from the most recent tag up to the oldest one.
 
 The script will then invoke `plot_results.py` which transforms this data into a graph, `linux-options.pdf`.
-The graph will differ slightly from what is in the paper as when we originally generated it (2023) the latest version of Linux was `v6.4-rc7`.
+
+> [!IMPORTANT]
+> The graph will differ slightly from what is in the paper as when we originally generated it (2023) the latest version of Linux was `v6.4-rc7`.

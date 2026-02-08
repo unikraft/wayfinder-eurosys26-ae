@@ -1,24 +1,22 @@
 # Wayfinder Eurosys26 Artifact Evaluation
 
-
 ## Overview
 
 This repository contains directories for the figures in the "Wayfinder: Automated Operating System Specialization"  paper.
 Each directory contains a `README.md` file detailing how to run the experiment and fetch the data, or how to use the data to generate the figures in the paper.
 This repository assumes that the `wfctl` tool exists and `wayfinder` is installed on the system.
 
-
 ## Wayfinder Setup
 
 Setting up Wayfinder means compiling it and setting up all dependencies and configuration files properly to be able to run it.
 
-This is already done and running on the evaluation server so this can be skipped.
-
+> [!NOTE]
+> This is already done and running on the evaluation server so this can be skipped.
 
 ### 1. Installation
 
 To install Wayfinder, navigate to its [repository](https://github.com/unikraft/wayfinder) and clone it.
-Use `go` in the wayfinder build container to generate the executable:
+Use `make` in the wayfinder build container to generate the executable:
 
 ```bash
 # Create the container environment for the builds
@@ -31,15 +29,13 @@ sudo make devenv
 make
 ```
 
-
 ### 2. Tool Dependency Installation
 
-In order for Wayfinder to function as presented in the paper you will need the following installed tools of older versions:
+In order for Wayfinder to function as presented in the paper you will need the following installed tools:
 
 - Qemu 5.2.0
 - Libvirt 7.4.0
 - Docker
-
 
 ### 3. Wayfinder Configuration
 
@@ -51,8 +47,7 @@ At a minimum you will have to configure the following in the `config/wayfinderd.
 - `influx_token` for saving extra VM metrics from libvirt (optional, but stops spamming)
 
 You can also configure the helper containers in the `docker-compose.yaml` file.
-If you have cpu0 free from the Wayfinder set, you can set it here for reducing experiment noise.
-
+If you have `cpu0` free from the Wayfinder set, you can set it here for reducing experiment noise.
 
 ## Wayfinder Running
 
@@ -68,7 +63,6 @@ After everything is running, you can also start the Wayfinder daemon:
 ```bash
 sudo ./scripts/wayfinder.sh
 ```
-
 
 ## Experiment Setup
 
@@ -97,31 +91,31 @@ docker build -t localhost:5000/wrk:latest --progress=plain -f Dockerfile .
 docker push localhost:5000/wrk:latest
 ```
 
-
 ## Wayfinder Usage
 
 Experiments have scripts attached to them that wrap over the `wfctl` commands, but that can be also used directly.
 
 To create a job out of job yaml file we would do:
-```
+
+```bash
 ~/wayfinder/dist/wfctl --server localhost:6000 create ~/wayfinder/examples/linux-cozart-nginx/job_only_runtime.yaml
 ```
 
 To run the first permutation, on individual cores, for job 34, we would do:
 
-```
+```bash
 ~/wayfinder/dist/wfctl --server localhost:6000 start --isol-level full --isol-split both -l 1 -s grid 34
 ```
 
 To run 10 random permutations for job 34 we would do:
-```
+
+```bash
 ~/wayfinder/dist/wfctl --server localhost:6000 start --isol-level full --isol-split both -l 10 -s random 34
 ```
 
 We can use `rainfrog` or `psql` to inspect data live as it gets populated in the database.
 We use cpu core isolation to make sure we bring result noise to a minimum.
 If we want to use an external model to suggest permutations we can use the python sdk for this which is generated from the proto specifications.
-
 
 ## Conclusion
 

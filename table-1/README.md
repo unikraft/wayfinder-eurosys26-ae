@@ -40,14 +40,14 @@ Still inside the container, launch a Qemu VM:
 ./launch-vm.sh
 ```
 
+> [!TIP]
+> The VM can be halted with the `halt` command, and Qemu exited with `ctrl+a` followed by `x`.
+
 Login as `root`, password `a`, then count the number of runtime options, i.e. the number of writable files in `/proc/sys` and `/sys`:
 
 ```bash
 find /proc/sys /sys -type f -perm /222 2>/dev/null | wc -l
 ```
 
-This number is not entirely deterministic and you may see slight variations with what is in the paper.
-
-:::tip
-The VM can be halted with the `halt` command, and Qemu exited with `ctrl+a` followed by `x`.
-:::
+> [!IMPORTANT]
+> This number is not entirely deterministic and you may see slight variations with what is in the paper.

@@ -4,15 +4,13 @@ Figure 2 of the paper shows the results of randomly searching for permutations o
 The experiment runs for 800 permutations with 3 repetitions each per permutation.
 To calculate the baseline, 30 repetitions of the original configuration are run.
 
-Estimated time to run the experiment: at least 30.375 hours.
-To run the experiment faster, decrease the number of repetitions per permutation in the script, and/or decrease the number of permutations.
-
-After obtaining the figure, you will notice numbers being much higher than the original experiment in the paper, as the server differs, but the relative difference between the baseline and the random search should be similar.
-This results in a figure with a similar shape to the one in the paper, but with different absolute values.
+> [!IMPORTANT]
+> After obtaining the figure, you will notice numbers being much higher than the original experiment in the paper, as the server differs, but the relative difference between the baseline and the random search should be similar.
+> This results in a figure with a similar shape to the one in the paper, but with different absolute values.
 
 ## Building the environment
 
-1. Create and push the builder image
+1. Create and push the builder image:
 
 ```bash
 # Navigate to the example
@@ -25,7 +23,7 @@ docker build -t localhost:5000/linux-nginx:latest --progress=plain -f Dockerfile
 docker push localhost:5000/linux-nginx:latest
 ```
 
-2. Create and push the helper tool
+1. Create and push the helper tool:
 
 ```bash
 # Navigate to the support test container
@@ -39,6 +37,13 @@ docker push localhost:5000/wrk:latest
 ```
 
 ## Running the Experiment
+
+> [!WARNING]
+> Estimated time to run the experiment: at least 30.375 hours.
+> To run the experiment faster, decrease the number of repetitions per permutation in the script, and/or decrease the number of permutations.
+
+You will notice that the `job.yaml` file has lines commented out.
+These lines are the compilation, boot, and application parameters that are either removed or hardcoded as this experiment focuses on runtime options only.
 
 1. Create the baseline experiment:
 
