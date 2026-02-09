@@ -117,6 +117,9 @@ We can use `rainfrog` or `psql` to inspect data live as it gets populated in the
 We use cpu core isolation to make sure we bring result noise to a minimum.
 If we want to use an external model to suggest permutations we can use the python sdk for this which is generated from the proto specifications.
 
+## DeepTune Figures
+The package [`DeepTune`](deeptune_figures) contains the code for generating the figures in the paper. It corresponds to the Figures 5, 6, 7, 8, 9, 10 and 11. For further instruction see the [README.md](deeptune_figures/README.md) file in that directory. 
+
 ## Conclusion
 
 The paragraphs above detail how to build and use the Wayfinder Framework to execute jobs on a server.
