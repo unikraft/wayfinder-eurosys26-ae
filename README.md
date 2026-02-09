@@ -6,6 +6,10 @@ This repository contains directories for the figures in the "Wayfinder: Automate
 Each directory contains a `README.md` file detailing how to run the experiment and fetch the data, or how to use the data to generate the figures in the paper.
 This repository assumes that the `wfctl` tool exists and `wayfinder` is installed on the system.
 
+The package [`DeepTune`](deeptune_figures) contains the code for generating the figures in the paper.
+It corresponds to the Figures 5, 6, 7, 8, 9, 10 and 11.
+For further instruction see the [README.md](deeptune_figures/README.md) file in that directory.
+
 ## Wayfinder Setup
 
 Setting up Wayfinder means compiling it and setting up all dependencies and configuration files properly to be able to run it.
@@ -116,9 +120,6 @@ To run 10 random permutations for job 34 we would do:
 We can use `rainfrog` or `psql` to inspect data live as it gets populated in the database.
 We use cpu core isolation to make sure we bring result noise to a minimum.
 If we want to use an external model to suggest permutations we can use the python sdk for this which is generated from the proto specifications.
-
-## DeepTune Figures
-The package [`DeepTune`](deeptune_figures) contains the code for generating the figures in the paper. It corresponds to the Figures 5, 6, 7, 8, 9, 10 and 11. For further instruction see the [README.md](deeptune_figures/README.md) file in that directory. 
 
 ## Conclusion
 
