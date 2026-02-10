@@ -1,5 +1,11 @@
 # WayFinder: Automated Operating System Specialization
 
+<div style="text-align: center;">  
+    <video src="figures/DeepTune_demo.mp4" width="640" height="360" controls></video>  
+    <figcaption>A demonstration of how DeepTune learns from and optimizes an unknown system.</figcaption>  
+</div>  
+
+
 ## Overview
 
 This directory contains the code and data necessary to reproduce the plots presented in the paper "WayFinder: Automated Operating System Specialization," which relates to DeepTune.

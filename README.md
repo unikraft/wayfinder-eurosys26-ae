@@ -119,7 +119,7 @@ To run 10 random permutations for job 34 we would do:
 
 We can use `rainfrog` or `psql` to inspect data live as it gets populated in the database.
 We use cpu core isolation to make sure we bring result noise to a minimum.
-If we want to use an external model to suggest permutations we can use the python sdk for this which is generated from the proto specifications.
+If we want to use an external model to suggest permutations, we can use the python sdk for this which is generated from the proto specifications.
 
 ## Conclusion
 
