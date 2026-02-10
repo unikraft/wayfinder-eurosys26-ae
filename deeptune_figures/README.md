@@ -1,5 +1,7 @@
 # WayFinder: Automated Operating System Specialization
 
+[![A demonstration of how DeepTune learns from and optimizes an unknown system.](figures/DeepTune_fitting.png)](figures/DeepTune_demo.mp4)
+
 <div style="text-align: center;">  
     <video src="figures/DeepTune_demo.mp4" width="640" height="360" controls></video>  
     <figcaption>A demonstration of how DeepTune learns from and optimizes an unknown system.</figcaption>  
