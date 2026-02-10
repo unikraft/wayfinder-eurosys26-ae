@@ -7,7 +7,7 @@ Each directory contains a `README.md` file detailing how to run the experiment a
 This repository assumes that the `wfctl` tool exists and `wayfinder` is installed on the system.
 
 The package [`DeepTune`](deeptune_figures) contains the code for generating the figures in the paper.
-It corresponds to the Figures 5, 6, 7, 8, 9, 10 and 11.
+It corresponds to the Figures 5, 6, 7, 8, 9, 10 and 11, and the Tables 2 and 3.
 For further instruction see the [README.md](deeptune_figures/README.md) file in that directory.
 
 ## Wayfinder Setup
