@@ -1,13 +1,5 @@
 # DeepTune
 
-[![Watch the video](figures/DeepTune_fitting.png)](figures/DeepTune_demo.mp4)  
-A demonstration of how DeepTune learns from and optimizes an unknown system. The figure you provided illustrates the results of the DeepTune algorithm, which is designed to learn and optimize systems using machine learning:  
-  
-- **Learned Model (Red Line)**: This line represents the model that has been fitted by the DeepTune algorithm to the data.  
-- **True Function (Green Line)**: This line depicts the actual underlying function (or system) that the model is trying to approximate.  
-- **Measurements (Blue Dots)**: These are the data points collected, showing the measurements used for training the model.  
-- **Uncertainty (Orange Bars)**: These vertical lines indicate the uncertainty in the measurements, providing a visual representation of prediction uncertainty.   
-
 ## Overview
 
 This directory contains the code and data necessary to reproduce the plots presented in the paper "WayFinder: Automated Operating System Specialization," which relates to DeepTune.
@@ -15,6 +7,17 @@ It provides Python scripts, precomputed DeepTune permutations, and simulations o
 
 > [!IMPORTANT]
 > Due to internal policies of NEC Laboratories Europe, we are unable to share the DeepTune implementation.
+
+## Algortihm Behavior
+
+[![Watch the video](figures/DeepTune_fitting.png)](figures/DeepTune_demo.mp4)
+A demonstration of how DeepTune learns from and optimizes an unknown system.
+The figure provided illustrates the results of the DeepTune algorithm, which is designed to learn and optimize systems using machine learning:
+
+- **Learned Model (Red Line)**: Line representing the model that has been fitted by the DeepTune algorithm to the data;
+- **True Function (Green Line)**: Line depicting the actual underlying function (or system) that the model is trying to approximate;
+- **Measurements (Blue Dots)**: The data points collected showing the measurements used for training the model;
+- **Uncertainty (Orange Bars)**: Vertical lines indicating the uncertainty in the measurements, which provide a visual representation of prediction uncertainty.
 
 ## Project Structure
 
