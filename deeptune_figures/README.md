@@ -1,7 +1,12 @@
-# WayFinder: Automated Operating System Specialization
+# DeepTune
 
 [![Watch the video](figures/DeepTune_fitting.png)](figures/DeepTune_demo.mp4)  
-A demonstration of how DeepTune learns from and optimizes an unknown system.  
+A demonstration of how DeepTune learns from and optimizes an unknown system. The figure you provided illustrates the results of the DeepTune algorithm, which is designed to learn and optimize systems using machine learning:  
+  
+- **Learned Model (Red Line)**: This line represents the model that has been fitted by the DeepTune algorithm to the data.  
+- **True Function (Green Line)**: This line depicts the actual underlying function (or system) that the model is trying to approximate.  
+- **Measurements (Blue Dots)**: These are the data points collected, showing the measurements used for training the model.  
+- **Uncertainty (Orange Bars)**: These vertical lines indicate the uncertainty in the measurements, providing a visual representation of prediction uncertainty.   
 
 ## Overview
 
