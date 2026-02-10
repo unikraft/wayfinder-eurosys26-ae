@@ -1,5 +1,8 @@
 # Wayfinder Eurosys26 Artifact Evaluation
 
+[![DOI](https://zenodo.org/badge/1152557049.svg)](https://doi.org/10.5281/zenodo.18598079)
+[![DOI](https://zenodo.org/badge/424182263.svg)](https://doi.org/10.5281/zenodo.18592520)
+
 ## Overview
 
 This repository contains directories for the figures in the "Wayfinder: Automated Operating System Specialization"  paper.
