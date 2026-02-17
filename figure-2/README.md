@@ -45,7 +45,7 @@ docker push localhost:5000/wrk:latest
 You will notice that the `job.yaml` file has lines commented out.
 These lines are the compilation, boot, and application parameters that are either removed or hardcoded as this experiment focuses on runtime options only.
 
-1. Create the baseline experiment:
+1. Create the baseline experiment (returns the experiment ID):
 
 ```bash
 ./create_experiment.sh
@@ -54,10 +54,10 @@ These lines are the compilation, boot, and application parameters that are eithe
 1. Start the baseline experiment:
 
 ```bash
-./start_baseline.sh <experiment_id>
+./start_baseline.sh <baseline_experiment_id>
 ```
 
-1. Create the random search experiment:
+1. Create the random search experiment (returns the experiment ID):
 
 ```bash
 ./create_experiment.sh
@@ -66,14 +66,14 @@ These lines are the compilation, boot, and application parameters that are eithe
 1. Start the random search experiment:
 
 ```bash
-./start_random.sh <experiment_id>
+./start_random.sh <random_experiment_id>
 ```
 
 1. Export the results:
 
 ```bash
-./export_results.sh <experiment_id> results_random.csv
-./export_results_baseline.sh <experiment_id> results_baseline.csv
+./export_results.sh <random_experiment_id> results_random.csv
+./export_results.sh <baseline_experiment_id> results_baseline.csv
 ```
 
 1. Plot the results using the `plot_results.py` script:
