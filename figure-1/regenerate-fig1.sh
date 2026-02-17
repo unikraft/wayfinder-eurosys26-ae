@@ -11,7 +11,7 @@ echo "Counting Kconfig options for each tag ..."
 cd linux
 git checkout master
 
-echo "" > $OUTPUT
+rm -rf $OUTPUT && touch $OUTPUT
 for t in `git tag --sort=-taggerdate`; do
     git checkout  $t &> /dev/null
     options=`grep -E -RnIs "^config\s[A-Z_0-9]+$" . | wc -l`

@@ -47,4 +47,3 @@ if __name__ == "__main__":
     plt.grid()
 
     plt.savefig(OUTPUT)
-    os.system("pdfcrop " + OUTPUT + " " + OUTPUT)
