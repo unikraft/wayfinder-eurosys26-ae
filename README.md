@@ -120,7 +120,11 @@ To run 10 random permutations for job 34 we would do:
 ~/wayfinder/dist/wfctl --server localhost:6000 start --isol-level full --isol-split both -l 10 -s random 34
 ```
 
-We can use `rainfrog` or `psql` to inspect data live as it gets populated in the database.
+> [!NOTE]
+> Right now there is no way to see the remaining number of permutations to be executed.
+> We can use `rainfrog` or `psql` to inspect data live as it gets populated in the database.
+> With them we can calculate the remaining number of permutations to be executed.
+
 We use cpu core isolation to make sure we bring result noise to a minimum.
 If we want to use an external model to suggest permutations, we can use the python sdk for this which is generated from the proto specifications.
 
